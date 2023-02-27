@@ -21,6 +21,7 @@ class QuestionsScreen extends StatelessWidget {
               case DummyScreenStage.display:
                 return SafeArea(
                   child: Scaffold(
+                    resizeToAvoidBottomInset: true,
                     backgroundColor: AppColors.greenBackGround,
                     body: PageView(
                       // physics: NeverScrollableScrollPhysics(),
@@ -60,40 +61,52 @@ class Questions extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final cubit = context.read<DummyScreenCubit>();
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 16.0),
-      child: Column(
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 16.0),
+        child: Column(
 
-        children: [
-          if(image != null)
+          children: [
+           SizedBox(
+             height: size.height * 0.48,
+             child: Column(
+               children: [
+                 if(image != null)
+                   Container(
+                     height: size.height * 0.3,
+                     margin: EdgeInsets.only(bottom: 8.0),
+                     child: Image.asset(image!),
+                   ),
+
+                 Container(
+                   // height: size.height * 0.4,
+                   padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 16.0),
+                   constraints: BoxConstraints(
+                       maxHeight: size.height * 0.18
+                   ),
+                   decoration: BoxDecoration(
+                       borderRadius: AppBorderRadius.defaultBorderRadius,
+                       color: AppColors.content
+                   ),
+                   child: SingleChildScrollView(
+                     child: Text(
+                       questionText,
+                       style: AppTextStyle.questionTitle,
+                     ),
+                   ),
+                 ),
+               ],
+             ),
+           ),
+
+            // Spacer(),
             Container(
-              height: size.height * 0.3,
-              margin: EdgeInsets.only(bottom: 8.0),
-              child: Image.asset(image!),
-            ),
 
-          Container(
-            // height: size.height * 0.4,
-            padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 16.0),
-            constraints: BoxConstraints(
-              maxHeight: size.height * 0.2
-            ),
-            decoration: BoxDecoration(
-              borderRadius: AppBorderRadius.defaultBorderRadius,
-              color: AppColors.content
-            ),
-            child: SingleChildScrollView(
-              child: Text(
-                questionText,
-                style: AppTextStyle.questionTitle,
+              constraints: BoxConstraints(
+                // minHeight: size.height * 0.2,
+                maxHeight: size.height * 0.55
               ),
-            ),
-          ),
-          Spacer(),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              height: size.height * 0.38,
+
               child: Column(
                 children: [
                   CustomAnswerButton(onPressed: (){
@@ -113,10 +126,10 @@ class Questions extends StatelessWidget {
                   }, child: Text(answers[3],style: AppTextStyle.questionAnswers,)),
                 ],
               ),
-            ),
-          )
+            )
 
-        ],
+          ],
+        ),
       ),
     );
   }
