@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_work/core/style.dart';
+import 'package:test_work/view/dummy/questions/questions_screen.dart';
 
+import '../../core/custom_button.dart';
 import '../../cubits/dummy/dummy_cubit.dart';
 import '../../cubits/dummy/dummy_state.dart';
 
@@ -28,6 +30,7 @@ class DisplayDummyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = context.read<DummyScreenCubit>();
     final size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
@@ -48,7 +51,16 @@ class DisplayDummyScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 16.0,),
-                Text("Welcome to Sport Quiz",style: AppTextStyle.titleLarge,)
+                Text("Welcome to Sport Quiz",style: AppTextStyle.titleLarge,),
+                const SizedBox(height: 30.0,),
+                Text("Best Score : ${cubit.state.bestScore}",style: TextStyle(fontSize: 24.0),),
+                const SizedBox(height: 60.0,),
+                CustomButton(onPressed: (){
+                  Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context){
+                    return QuestionsScreen();
+                  }), (route) => false);
+                }, child: Text("Start",style: TextStyle(fontSize: 18.0),),)
+
               ],
             ),
           ),
