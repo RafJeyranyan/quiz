@@ -25,7 +25,7 @@ class QuestionsScreen extends StatelessWidget {
                     resizeToAvoidBottomInset: true,
                     backgroundColor: AppColors.greenBackGround,
                     body: PageView(
-                      // physics: NeverScrollableScrollPhysics(),
+                      physics: NeverScrollableScrollPhysics(),
                       controller: state.controller,
                       children: [
                         ...questions.map((e) => Questions(
