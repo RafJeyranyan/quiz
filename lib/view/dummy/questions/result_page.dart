@@ -25,7 +25,14 @@ class ResultPage extends StatelessWidget {
             Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context){
               return QuestionsScreen();
             }), (route) => false);
-          }, child: Text("Start Again",style: AppTextStyle.questionAnswers,))
+          }, child: Text("Start Again",style: AppTextStyle.questionAnswers,)),
+          SizedBox(height: 40.0,),
+          CustomButton(
+              backgroundColor: Color(0xFFCB4B4B),
+              onPressed: (){
+            cubit.removeBest();
+          }, child:
+          Text("Clear",style: AppTextStyle.questionAnswers,))
 
         ],
       ),

@@ -142,5 +142,82 @@ final questions = const [
   ],
   'rightAnswer': "Water Polo"
 },
+  {
+  'questionText': '14. In which sport is this ball used?',
+  'image' : "assets/Lacrosse.png",
+  'answers': [
+    'Polo',
+    'Rugby',
+    'Lacrosse',
+    'Dodgeball',
+  ],
+  'rightAnswer': "Lacrosse"
+},
+  {
+  'questionText': '15. In which sport is this ball used?',
+  'image' : "assets/Handball.jpg",
+  'answers': [
+    'Volleyball',
+    'Handball',
+    'Basketball',
+    'Football',
+  ],
+  'rightAnswer': "Handball"
+},
+  {
+  'questionText': '16. Which country has the most Olympic gold medals in swimming?',
+  'image' : null,
+  'answers': [
+    'China',
+    'United States',
+    'United Kingdom',
+    'Australia',
+  ],
+  'rightAnswer': "United States"
+},
+  {
+  'questionText': '17. How many players are on a Futsal(mini-football) team?',
+  'image' : "assets/Futsal.jpg",
+  'answers': [
+    '3',
+    '4',
+    '5',
+    '6',
+  ],
+  'rightAnswer': "5"
+},
+  {
+  'questionText': '18. Where did the term "billiards(Pool)" come from?',
+  'image' : "assets/Billiards.jpeg",
+  'answers': [
+    'Italy',
+    'Hungary',
+    'Belgium',
+    'France',
+  ],
+  'rightAnswer': "France"
+},
+  {
+  'questionText': '19. When did boxing become a legal sport?',
+  'image' : "assets/boxing_gloves.jpg",
+  'answers': [
+    '1921',
+    '1901',
+    '1931',
+    '1911',
+  ],
+  'rightAnswer': "1901"
+},
+  {
+  'questionText': '20. How many days does Wimbledon traditionally last?',
+  'image' : "assets/Wimbledon.jpg",
+  'answers': [
+    '13',
+    '14',
+    '20',
+    '30',
+  ],
+  'rightAnswer': "14"
+},
 
 ];
