@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fom.bet.fonbet.bk.stlop">
+    package="my.bet.mybet.app">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <application
-        android:label="Фон"
+        android:label="Mybet"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
