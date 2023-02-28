@@ -22,9 +22,20 @@ class DummyScreenCubit extends Cubit<DummyScreenState> {
    emit(state.copyWith(bestScore: bestScore));
   }
 
-  answerSelected(String selectedAnswer, String rightAnswer){
+  setBest(int newResult) async{
+    final sharedPrefs = await SharedPreferences.getInstance();
+    final ok = await sharedPrefs.setInt("bestScore", newResult);
+    if(ok) {
+      emit(state.copyWith(bestScore: newResult));
+    }
+}
+
+  answerSelected(String selectedAnswer, String rightAnswer) async{
     if(selectedAnswer == rightAnswer){
       emit(state.copyWith(currentScore: state.currentScore + 1));
+    }
+    if(state.currentScore > state.bestScore){
+      await setBest(state.currentScore);
     }
     state.controller.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeIn);
   }

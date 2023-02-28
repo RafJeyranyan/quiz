@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_work/core/custom_button.dart';
 import 'package:test_work/core/style.dart';
 import 'package:test_work/view/dummy/questions/questions.dart';
+import 'package:test_work/view/dummy/questions/result_page.dart';
 
 import '../../../core/custom_answer_botton.dart';
 import '../../../cubits/dummy/dummy_cubit.dart';
@@ -32,7 +33,8 @@ class QuestionsScreen extends StatelessWidget {
                               rightAnswer: e["rightAnswer"] as String,
                               answers: e["answers"] as List<String>,
                               image: e["image"] as String?,
-                            ))
+                            )),
+                        ResultPage()
                       ],
                     ),
                   ),

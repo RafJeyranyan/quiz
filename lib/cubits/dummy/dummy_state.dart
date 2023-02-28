@@ -36,5 +36,7 @@ class DummyScreenState extends Equatable {
   @override
   List<Object?> get props => [
         stage,
+        bestScore,
+        currentScore,
       ];
 }

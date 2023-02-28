@@ -47,12 +47,100 @@ final questions = const [
   'questionText': '5. In which sport would you score a touchdown?',
   'image' : null,
   'answers': [
-    'Detroit Falcons',
-    'Washington Capitols',
-    'Boston Celtics',
-    'New York Knicks',
+    'Basketball',
+    'Hockey',
+    'American Football',
+    'Tennis',
   ],
-  'rightAnswer': "New York Knicks"
+  'rightAnswer': "American Football"
+},
+  {
+  'questionText': '6. In which year did Amir Khan win his Olympic boxing medal?',
+  'image' : "assets/Amir_Khan.jpg",
+  'answers': [
+    '1998',
+    '2000',
+    '2004',
+    '2008',
+  ],
+  'rightAnswer': "2004"
+},
+  {
+  'questionText': '7. Which team did Michael Jordan play for the majority of his career?',
+  'image' : "assets/Michael_Jordan.png",
+  'answers': [
+    'Washington Wizards',
+    'Chicago Bulls',
+    'Los Angeles Lakers',
+    'Boston Celtics',
+  ],
+  'rightAnswer': "Chicago Bulls"
+},
+  {
+  'questionText': '8. In which sport is this ball used?',
+  'image' : "assets/Dodgeball.jpeg",
+  'answers': [
+    'Dodgeball',
+    'Lacrosse',
+    'Baseball',
+    'Volleyball',
+  ],
+  'rightAnswer': "Dodgeball"
+},
+  {
+  'questionText': '9. In which sport is this ball used?',
+  'image' : "assets/Tennis.jpeg",
+  'answers': [
+    'Baseball',
+    'Lacrosse',
+    'Tennis',
+    'Stickball',
+  ],
+  'rightAnswer': "Tennis"
+},
+  {
+  'questionText': '10. In which sport is this ball used?',
+  'image' : "assets/Baseball.png",
+  'answers': [
+    'Tennis',
+    'Golf',
+    'Baseball',
+    'Stickball',
+  ],
+  'rightAnswer': "Baseball"
+},
+  {
+  'questionText': '11. In which sport is this ball used?',
+  'image' : "assets/Cycle_polo.png",
+  'answers': [
+    'Irish road bowling',
+    'Cycle polo',
+    'Hockey',
+    'Carpet bowls',
+  ],
+  'rightAnswer': "Cycle polo"
+},
+  {
+  'questionText': '12. In which sport is this ball used?',
+  'image' : "assets/Croquet.png",
+  'answers': [
+    'Croquet',
+    'Bowling ',
+    'Table tennis',
+    'Kickball',
+  ],
+  'rightAnswer': "Croquet"
+},
+  {
+  'questionText': '13. In which sport is this ball used?',
+  'image' : "assets/water_polo.png",
+  'answers': [
+    'Polo',
+    'Netball',
+    'Water Polo',
+    'Volleyball',
+  ],
+  'rightAnswer': "Water Polo"
 },
 
 ];
