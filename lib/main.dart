@@ -10,8 +10,6 @@ import 'cubits/connection/connection_cubit.dart';
 import 'cubits/connection/connection_state.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
 
   runApp(const MyApp());
 }
@@ -41,6 +39,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
         navigatorKey: kNavigatorKey,
         builder: (context, child) {
           return BlocListener<InternetCubit, InternetState>(

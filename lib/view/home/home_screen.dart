@@ -6,7 +6,7 @@ import '../../cubits/home/home_state.dart';
 import '../dummy/dummy_screen.dart';
 import '../error/error_screen.dart';
 import '../loading/loading_screen.dart';
-import '../web_view/web_view_screen.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,11 +23,6 @@ class HomeScreen extends StatelessWidget {
               return const LoadingScreen();
             case HomeScreenStage.dummy :
               return const DummyScreen();
-            case HomeScreenStage.webView:
-            // Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
-            //     builder: (context) => WebViewScreen(url: state.url!,)), (
-            //     route) => false);
-              return WebViewScreen(url: state.url!,);
             case HomeScreenStage.error:
               return ErrorScreen(errorMessage: state.errorMessage!,);
 

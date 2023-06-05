@@ -3,7 +3,6 @@ import 'package:equatable/equatable.dart';
 enum HomeScreenStage {
   loading,
   dummy,
-  webView,
   error,
 }
 
